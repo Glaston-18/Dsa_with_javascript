@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [
+        23, 34, 56, 76, 87, 21, 15, 98, 92, 105, 121, 117, 115, 120, 119, 135,
+        127, 129, 128, 130,
+      ];
+      let min = arr1[0];
+      let secondMin;
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (i == 0) {
+          min = arr1[i];
+        } else {
+          if (arr1[i] < min) {
+            secondMin = min;
+            min = arr1[i];
+          } else {
+            if (arr1[i] < secondMin) {
+              secondMin = arr1[i];
+            }
+          }
+        }
+      }
+
+      console.log("Min = " + min + " " + "Second Min = " + secondMin);
+    </script>
+  </body>
+</html>
