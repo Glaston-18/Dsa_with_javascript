@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [23, 34, -12, -45, -76, 0, 20, 35, 38, 0, 56, 75, 0, 85];
+      let find = 0;
+      let occurenceIndex;
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] == find) {
+          occurenceIndex = i;
+          break;
+        }
+      }
+
+      console.log("Occurence Index = " + occurenceIndex);
+    </script>
+  </body>
+</html>
