@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [12, 32, 45, 76, 89, 54, 65];
+
+      let k = 3;
+      let removed;
+      for (let i = 0; i < k; i++) {
+        removed = arr1.splice(0, 1);
+        arr1.push(removed);
+      }
+
+      console.log("Array k position left = " + arr1);
+    </script>
+  </body>
+</html>
