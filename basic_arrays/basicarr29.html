@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [12, 32, 45, 76, 45, 54, 65];
+
+      let north = 2;
+      let south = 5;
+      let popped;
+      popped = arr1[north];
+      arr1[north] = arr1[south];
+      arr1[south] = popped;
+      console.log("Array = " + arr1);
+    </script>
+  </body>
+</html>
