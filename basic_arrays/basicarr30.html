@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [4, 5, 6, 7, 0, 34, 2, 0, 12, 17, 0, 45, 35];
+      let popped;
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] == 0) {
+          popped = arr1.splice(i, 1);
+          arr1.push(popped);
+          popped = null;
+        }
+      }
+
+      console.log("Array = " + arr1);
+    </script>
+  </body>
+</html>
