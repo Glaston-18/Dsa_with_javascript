@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [4, 5, 6, 7, 0, 34, 2, 0, 12, 17, 0, 45, 35];
+      let temp;
+      for (let i = 0; i < arr1.length; i++) {
+        for (let j = i + 1; j < arr1.length; j++) {
+          if (arr1[i] < arr1[j]) {
+            temp = arr1[i];
+            arr1[i] = arr1[j];
+            arr1[j] = temp;
+          }
+        }
+      }
+
+      console.log("Sorted ascending = " + arr1);
+    </script>
+  </body>
+</html>
