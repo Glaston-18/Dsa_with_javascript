@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [4, 5, 6, 7, 0, 34, 2, 0, 12, 6, 4, 5, 6, 17, 0, 45, 35];
+      let unique = [];
+      for (let i = 0; i < arr1.length; i++) {
+        for (let j = i + 1; j < arr1.length; j++) {
+          if (arr1[i] != arr1[j]) {
+            if (!unique.includes(arr1[i])) {
+              unique.push(arr1[i]);
+            }
+          }
+        }
+      }
+
+      console.log("Original array = " + arr1);
+      console.log("Unique array = " + unique);
+    </script>
+  </body>
+</html>
