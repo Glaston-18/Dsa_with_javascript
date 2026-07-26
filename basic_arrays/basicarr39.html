@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [4, 5, 6, 7, 0, 34, 2, 12, 17, 45, 35];
+
+      let min = arr1[0];
+      let max = arr1[0];
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] < min) {
+          min = arr1[i];
+        }
+      }
+
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] > max) {
+          max = arr1[i];
+        }
+      }
+
+      console.log("Max = " + max);
+      console.log("Min = " + min);
+      console.log("Difference between largest and smallest = " + (max - min));
+    </script>
+  </body>
+</html>
