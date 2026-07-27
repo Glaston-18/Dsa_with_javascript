@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [1, 2, 3, 4, 5];
+      let arr2 = [1, 2, 3, 4, 5];
+      let isIdentical = false;
+      if (arr1.length == arr2.length) {
+        for (let i = 0; i < arr1.length; i++) {
+          if (arr1[i] != arr2[i]) {
+            isIdentical = false;
+            break;
+          }
+          isIdentical = true;
+        }
+      }
+
+      console.log("Identical = " + isIdentical);
+    </script>
+  </body>
+</html>
