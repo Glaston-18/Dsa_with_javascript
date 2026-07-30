@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Welcome, 45 to India! 1821";
+      let result = "";
+      let splitString = str1.split(" ");
+
+      for (let i = 0; i < splitString.length; i++) {
+        if (i > 0) {
+          result += " ";
+        }
+        for (let j = splitString[i].length - 1; j >= 0; j--) {
+          result += splitString[i].charAt(j);
+        }
+      }
+      console.log("Original string = " + str1);
+
+      console.log("Reverse each word in string = " + result);
+    </script>
+  </body>
+</html>
