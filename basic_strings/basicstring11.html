@@ -10,8 +10,8 @@
       let str1 = "Welcome, 45 to India! 1821";
       let result = "";
       for (let i = 0; i < str1.length; i++) {
-        if (str1.charCodeAt(i) >= 65 && str1.charCodeAt(i) <= 90) {
-          result += String.fromCharCode(str1.charCodeAt(i) + 32);
+        if (str1.charCodeAt(i) >= 97 && str1.charCodeAt(i) <= 122) {
+          result += String.fromCharCode(str1.charCodeAt(i) - 32);
         } else {
           result += str1.charAt(i);
         }
