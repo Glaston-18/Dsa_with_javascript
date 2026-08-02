@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Apppppppppppppppppppppppppple";
+      let char = "p";
+      let result = "";
+      let count = 0;
+      let pos = [];
+      for (let i = 0; i < str1.length; i++) {
+        if (str1[i] == char) {
+          pos.push(i);
+          result = "Character found = " + str1[i] + " at index " + i;
+          if (i == str1.length - 1) {
+            break;
+          }
+        } else if (pos.length == 0) {
+          result = "No character matches";
+        }
+      }
+      console.log("Final result = " + result);
+    </script>
+  </body>
+</html>
