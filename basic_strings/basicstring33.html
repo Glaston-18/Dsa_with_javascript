@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Welcome, 45 to India! 1821";
+      let char = "e";
+      let found = false;
+      for (let i = 0; i < str1.length; i++) {
+        if (str1[i] == char) {
+          found = true;
+          break;
+        }
+      }
+
+      if (found == true) {
+        console.log(
+          "Character " + '"' + char + '"' + " found in the string " + str1,
+        );
+      } else {
+        console.log(
+          "Character " + '"' + char + '"' + " not found in the string " + str1,
+        );
+      }
+    </script>
+  </body>
+</html>
