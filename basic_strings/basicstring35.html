@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Welcome, 45 to India! 1821";
+      let char = "ome";
+      let counter = 0;
+      let charCounter = 0;
+      let result = "";
+
+      for (let i = 0; i < str1.length; i++) {
+        if (str1[i] == char[charCounter]) {
+          charCounter++;
+          result += str1[i];
+          if (charCounter == char.length) {
+            break;
+          }
+        } else {
+          charCounter = 0;
+        }
+      }
+      console.log("Charcounter = " + charCounter);
+      console.log("String retreived = " + result);
+
+      if (charCounter == char.length) {
+        console.log("substring found");
+      } else {
+        console.log("substring not found");
+      }
+    </script>
+  </body>
+</html>
