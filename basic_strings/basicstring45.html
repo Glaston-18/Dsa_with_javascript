@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "AppleZoo";
+      let min = str1[0].toLowerCase();
+      let result = "";
+      let caseSensitive = str1.toLowerCase();
+
+      for (let i = 0; i < caseSensitive.length; i++) {
+        for (let j = i + 1; j < caseSensitive.length; j++) {
+          if (caseSensitive.charCodeAt(i) < caseSensitive.charCodeAt(j)) {
+            if (caseSensitive.charCodeAt(i) < min) {
+              min = caseSensitive[i];
+            }
+          }
+        }
+      }
+
+      console.log("Alphabetically smaller character = " + min);
+    </script>
+  </body>
+</html>

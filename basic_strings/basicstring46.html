@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "ZooApple";
+      let max = str1[0].toLowerCase();
+      let caseSensitive = str1.toLowerCase();
+
+      for (let i = 0; i < caseSensitive.length; i++) {
+        for (let j = i + 1; j < caseSensitive.length; j++) {
+          if (caseSensitive.charCodeAt(i) > caseSensitive.charCodeAt(j)) {
+            if (caseSensitive.charCodeAt(i) > max) {
+              max = caseSensitive[i];
+            }
+          }
+        }
+      }
+
+      console.log("Alphabetically larger character = " + max);
+    </script>
+  </body>
+</html>
