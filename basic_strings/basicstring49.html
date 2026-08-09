@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Welcome to India";
+      let invalid = false;
+      for (let i = 0; i < str1.length; i++) {
+        if (
+          (str1.charCodeAt(i) >= 65 && str1.charCodeAt(i) <= 90) ||
+          (str1.charCodeAt(i) >= 97 && str1.charCodeAt(i) <= 122) ||
+          str1.charCodeAt(i) == 32
+        ) {
+          continue;
+        } else {
+          invalid = true;
+          break;
+        }
+      }
+      if (invalid) {
+        console.log(
+          "The string includes characters other than alphabets too...",
+        );
+      } else {
+        console.log("The string only contains alphabets");
+      }
+    </script>
+  </body>
+</html>
