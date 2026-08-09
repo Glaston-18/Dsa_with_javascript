@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "Welcome, 45 to India! 1821";
+      let splitStrings = str1.split(" ");
+      let count = 0;
+      let result = "";
+      for (let i = splitStrings.length - 1; i >= 0; i--) {
+        result += splitStrings[i];
+      }
+
+      console.log("Reversed Sentence = " + result);
+    </script>
+  </body>
+</html>
