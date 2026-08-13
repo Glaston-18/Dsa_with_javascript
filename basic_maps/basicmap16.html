@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {};
+
+      const map1 = new Map();
+      map1.set("name", "glaston");
+      map1.set("yoe", 4);
+      map1.set("yop", 2022);
+
+      map1.forEach((element, key) => {
+        // Object.defineProperty(user, key, { value: element });//this too valid
+        user[key] = element;
+      });
+
+      console.log(user);
+    </script>
+  </body>
+</html>
