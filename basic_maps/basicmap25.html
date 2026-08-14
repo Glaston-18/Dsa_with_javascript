@@ -11,15 +11,13 @@
 
       map1.set("glaston", 96);
       map1.set("alice", 85);
-      map1.set("daniel", 92);
-      let max = map1.values().next().value; //key part of the problem
+      map1.set("daniel", 64);
+      let sum = 0;
 
       map1.forEach((element, key) => {
-        if (element > max) {
-          max = element;
-        }
+        sum += element;
       });
-      console.log(max);
+      console.log(sum);
     </script>
   </body>
 </html>
