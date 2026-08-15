@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+      let count = 0;
+
+      map1.forEach((element, key) => {
+        if (element > 70) {
+          count++;
+        }
+      });
+      console.log("Number of entries greater than 70 = " + count);
+    </script>
+  </body>
+</html>
