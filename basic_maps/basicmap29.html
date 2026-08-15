@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+      let map2 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+
+      map2.set("glaston", 96);
+      map2.set("alice", 85);
+      map2.set("daniel", 64);
+      let count = 0;
+      let isIdentical = false;
+      if (map1.size === map2.size) {
+        map1.forEach((element, key) => {
+          if (map2.has(key) && map2.get(key) === element) {
+            count++;
+          }
+        });
+        isIdentical = count === map1.size ? true : false;
+      } else {
+        isIdentical = false;
+      }
+
+      console.log(`Map 1 and 2 identical = ${isIdentical}`);
+    </script>
+  </body>
+</html>
