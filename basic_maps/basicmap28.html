@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+      let count = 0;
+      let minValue = map1.values().next().value;
+      let minKey = map1.keys().next().value;
+      map1.forEach((element, key) => {
+        if (element < minValue) {
+          minValue = element;
+          minKey = key;
+        }
+      });
+      console.log(`Key '${minKey}' have minimum value of ${minValue}`);
+    </script>
+  </body>
+</html>

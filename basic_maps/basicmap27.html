@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+      let count = 0;
+      let maxValue = map1.values().next().value;
+      let maxKey = map1.keys().next().value;
+      map1.forEach((element, key) => {
+        if (element > maxValue) {
+          maxValue = element;
+          maxKey = key;
+        }
+      });
+      console.log(`Key '${maxKey}' have maximum value of ${maxValue}`);
+    </script>
+  </body>
+</html>
