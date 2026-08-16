@@ -17,11 +17,11 @@
 
       const arr1 = [];
 
-      for (x of map1.keys()) {
+      for (x of map1.values()) {
         arr1.push(x);
       }
 
-      const result = arr1.sort();
+      const result = arr1.sort((a, b) => a - b);
 
       console.log(result);
     </script>
