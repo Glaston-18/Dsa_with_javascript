@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+      let keyChar = "l";
+      let currentKey = "";
+
+      map1.set("glaston", 5);
+      map1.set("alice", 4);
+      map1.set("daniel", 3);
+      map1.set("vance", 4);
+      map1.set("lance", 2);
+
+      map1.forEach((element, key) => {
+        map1.set(key, element * element);
+      });
+
+      console.log(map1);
+    </script>
+  </body>
+</html>

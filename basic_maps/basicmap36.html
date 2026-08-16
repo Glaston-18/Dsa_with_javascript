@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+
+      map1.set("glaston", 5);
+      map1.set("alice", 4);
+      map1.set("daniel", 3);
+      map1.set("vance", 4);
+      map1.set("lance", 2);
+
+      const arr1 = [];
+      const arr2 = [12, 45, 100, 123, 145];
+
+      for (x of map1.keys()) {
+        arr1.push(x);
+      }
+
+      const result = arr1.sort();
+
+      console.log(result);
+    </script>
+  </body>
+</html>
