@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+      let map2 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+
+      map2.set("glaston", 98);
+      map2.set("kakashi", 72);
+      map2.set("choji", 67);
+
+      map1.forEach((element, key) => {
+        if (map1.has(key) === map2.has(key)) {
+          map2.set(
+            key,
+            map1.get(key) > map2.get(key) ? map1.get(key) : map2.get(key),
+          );
+        } else {
+          map2.set(key, element);
+        }
+      });
+
+      console.log(map2);
+    </script>
+  </body>
+</html>
