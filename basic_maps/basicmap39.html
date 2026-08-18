@@ -14,14 +14,28 @@
       map1.set("alice", 4);
       map1.set("daniel", 3);
       map1.set("lance", 2);
+      map1.set("andrew", 5);
+      map1.set("james", 5);
+      map1.set("konan", 3);
 
       let duplicates = [];
 
       map1.forEach((element, key) => {
-        map2.set(element, key);
+        if (map2.has(element)) {
+          let currentElement = map2.get(element);
+          map2.set(element, ++currentElement);
+        } else {
+          map2.set(element, 1);
+        }
       });
 
-      console.log(map2);
+      map2.forEach((element, key) => {
+        if (element > 1) {
+          duplicates.push(key);
+        }
+      });
+
+      console.log(duplicates);
     </script>
   </body>
 </html>
