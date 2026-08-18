@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+      let map2 = new Map();
+
+      map1.set("glaston", 5);
+      map1.set("alice", 4);
+      map1.set("daniel", 3);
+      map1.set(1234, 2);
+      map1.set("marco", 7);
+
+      let count = 0;
+
+      map1.forEach((element, key) => {
+        let currentKey = key;
+        if (typeof currentKey === "string") {
+          count++;
+        }
+      });
+
+      console.log("Number of keys with string values = " + count);
+    </script>
+  </body>
+</html>
