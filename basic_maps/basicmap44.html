@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+
+      map1.set("glaston", 96);
+      map1.set("alice", 85);
+      map1.set("daniel", 64);
+      map1.set("dan", 37);
+      map1.set("derik", 60);
+      let sum = 0;
+      let avg = 0;
+
+      map1.forEach((element, key) => {
+        sum += element;
+      });
+      avg = sum / map1.size.toFixed(2);
+      map1.forEach((element, key) => {
+        if (element < avg) {
+          map1.delete(key);
+        }
+      });
+      console.log(map1);
+    </script>
+  </body>
+</html>
