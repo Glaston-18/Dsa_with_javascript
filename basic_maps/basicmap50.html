@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let map1 = new Map();
+      let userPrompt;
+
+      function keyValue(type) {
+        if (type == "keyvalue") {
+          const addKeyPrompt = prompt("Enter Key: ");
+          const addValuePrompt = prompt("Enter value: ");
+
+          map1.set(addKeyPrompt, addValuePrompt);
+        } else if (type == "search") {
+          const searchKeyPrompt = prompt("Enter Key: ");
+
+          let searchedValue = map1.get(searchKeyPrompt);
+          alert("Your searched value = " + searchedValue);
+        } else if (type == "delete") {
+          const deleteKeyPrompt = prompt("Enter Key: ");
+
+          let deletedValue = map1.get(deleteKeyPrompt);
+          map1.delete(deleteKeyPrompt);
+          alert("Your deleted value = " + deletedValue);
+        }
+      }
+
+      do {
+        userPrompt = prompt(`
+            Choose from options below.
+            1.Add
+            2.Update
+            3.Delete
+            4.Search
+            5.Display
+            6.Exit
+            what is your choice?`);
+        switch (userPrompt) {
+          case "1":
+            this.keyValue("keyvalue");
+            break;
+
+          case "2":
+            this.keyValue("keyvalue");
+            break;
+
+          case "3":
+            this.keyValue("delete");
+            break;
+
+          case "4":
+            this.keyValue("search");
+            break;
+
+          case "5":
+            let elements = [];
+            const mapValues = map1.forEach((element, key) => {
+              elements.push(key + " = " + element);
+            });
+            alert(elements);
+            break;
+
+          case "6":
+            break;
+
+          default:
+            console.log("Invalid input");
+            break;
+        }
+      } while (userPrompt != "6");
+
+      console.log(map1);
+    </script>
+  </body>
+</html>
