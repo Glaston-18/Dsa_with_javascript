@@ -15,9 +15,14 @@
       map1.set("dan", 37);
       map1.set("derik", 60);
       let sum = 0;
+      let avg = 0;
 
       map1.forEach((element, key) => {
-        if (element % 2 == 0) {
+        sum += element;
+      });
+      avg = sum / map1.size.toFixed(2);
+      map1.forEach((element, key) => {
+        if (element < avg) {
           map1.delete(key);
         }
       });
