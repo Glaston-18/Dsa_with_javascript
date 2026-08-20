@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let namesArray = ["raja", "glaston", "virat", "raja", "virat"];
+      let namesSet = new Set(namesArray);
+
+      let uniqueArray = []; //array way
+      namesArray.forEach((element) => {
+        if (!uniqueArray.includes(element)) {
+          uniqueArray.push(element);
+        }
+      });
+
+      if (uniqueArray.length === namesArray.length) {
+        console.log("Array is unique");
+      } else {
+        console.log("Array is not unique");
+      }
+
+      //set way
+
+      if (namesArray.length === namesSet.size) {
+        console.log("Array is unique by set");
+      } else {
+        console.log("Array is not unique by set");
+      }
+    </script>
+  </body>
+</html>
