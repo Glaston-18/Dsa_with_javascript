@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbersArray = [20, 24, 4, 5, 28, 32, 1, 2, 3, 16];
+      let numbersSet = new Set();
+      let newArray = [];
+
+      let count = 0;
+      let number = 4;
+
+      numbersArray.forEach((num) => {
+        numbersSet.add(num);
+      });
+
+      numbersSet.forEach((num) => {
+        newArray.push(num);
+      });
+
+      newArray.sort((a, b) => a - b);
+
+      console.log(`Reversed order = ${newArray.reverse()}`);
+    </script>
+  </body>
+</html>
