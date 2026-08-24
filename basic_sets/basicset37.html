@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let namesSet = new Set();
+      let newSet = new Set();
+
+      namesSet.add("apple");
+      namesSet.add("orange");
+      namesSet.add("mango");
+      namesSet.add("AppLE");
+
+      namesSet.forEach((element) => {
+        newSet.add(element.toUpperCase());
+      });
+
+      console.log(namesSet);
+
+      console.log(newSet);
+    </script>
+  </body>
+</html>

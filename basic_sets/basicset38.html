@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let mixedSet = new Set();
+      let newSet = new Set();
+      let count = 0;
+
+      mixedSet.add("apple");
+      mixedSet.add("orange");
+      mixedSet.add(51);
+      mixedSet.add(24);
+      mixedSet.add(15);
+      mixedSet.add("mango");
+      mixedSet.add(47);
+      mixedSet.add("AppLE");
+      mixedSet.add(35);
+
+      mixedSet.forEach((element) => {
+        if (typeof element == "string") {
+          count++;
+        }
+      });
+
+      console.log(mixedSet);
+
+      console.log("No of strings in mixed set = " + count);
+    </script>
+  </body>
+</html>

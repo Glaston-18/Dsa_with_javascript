@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "welcome to india";
+
+      let newSet = new Set();
+      let count = 0;
+
+      for (let i = 0; i < str1.length; i++) {
+        if (
+          str1.charAt(i) == "a" ||
+          str1.charAt(i) == "A" ||
+          str1.charAt(i) == "e" ||
+          str1.charAt(i) == "E" ||
+          str1.charAt(i) == "i" ||
+          str1.charAt(i) == "I" ||
+          str1.charAt(i) == "o" ||
+          str1.charAt(i) == "O" ||
+          str1.charAt(i) == "u" ||
+          str1.charAt(i) == "U"
+        ) {
+          newSet.add(str1.charAt(i));
+        }
+      }
+
+      console.log(newSet, "set with vowels");
+    </script>
+  </body>
+</html>
