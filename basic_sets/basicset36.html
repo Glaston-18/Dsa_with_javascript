@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numberSet = new Set();
+      let newSet = new Set();
+
+      numberSet.add(12);
+      numberSet.add(4);
+      numberSet.add(25);
+
+      numberSet.forEach((element) => {
+        if (element % 2 == 0) {
+          newSet.add(Math.pow(element, 2));
+        }
+      });
+
+      console.log(numberSet);
+
+      console.log(newSet);
+    </script>
+  </body>
+</html>
