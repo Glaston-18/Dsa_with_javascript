@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 =
+        "welcome to india, we are here to develop the nation to reach great heights";
+
+      let newSet = new Set();
+      let count = 0;
+      let splitArray = str1.split(" ");
+
+      for (let i = 0; i < splitArray.length; i++) {
+        newSet.add(splitArray[i]);
+      }
+
+      console.log("count of unique words = " + newSet.size);
+    </script>
+  </body>
+</html>
