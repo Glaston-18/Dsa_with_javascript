@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let namesSet = new Set();
+      let namesMergeSet = new Set();
+      let mergedSet = new Set();
+      let common = null;
+      namesSet.add("raja");
+      namesSet.add("glaston");
+      namesSet.add("virat");
+
+      namesMergeSet.add("raja");
+      namesMergeSet.add("virat");
+      namesMergeSet.add("glaston");
+
+      common = namesSet.intersection(namesMergeSet);
+
+      if (common.size == namesSet.size && common.size == namesMergeSet.size) {
+        console.log("Both set have same elements");
+      } else {
+        console.log("Both set have no same elements");
+      }
+      console.log(namesSet);
+      console.log(namesMergeSet);
+    </script>
+  </body>
+</html>
