@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let set1 = new Set();
+      let userPrompt;
+
+      function keyValue(type) {
+        if (type == "value") {
+          const addValuePrompt = prompt("Enter value: ");
+
+          set1.add(addValuePrompt);
+        } else if (type == "search") {
+          const searchValuePrompt = prompt("Enter value: ");
+
+          let searchedValue = set1.has(searchValuePrompt);
+          alert("Your searched value = " + searchedValue);
+        } else if (type == "delete") {
+          const deleteValuePrompt = prompt("Enter value: ");
+
+          let deletedValue = set1.delete(deleteValuePrompt);
+          alert("Your deleted value = " + deletedValue);
+        }
+      }
+
+      do {
+        userPrompt = prompt(`
+            Choose from options below.
+            1.Add
+            2.Delete
+            3.Search
+            4.Display
+            5.Exit
+           
+            what is your choice?`);
+        switch (userPrompt) {
+          case "1":
+            this.keyValue("value");
+            break;
+
+          case "2":
+            this.keyValue("delete");
+            break;
+
+          case "3":
+            this.keyValue("search");
+            break;
+
+          case "4":
+            let elements = [];
+            const setValues = set1.forEach((element) => {
+              elements.push("value" + " = " + element);
+            });
+            alert(elements);
+            break;
+
+          default:
+            console.log("Invalid input");
+            break;
+        }
+      } while (userPrompt != "5");
+
+      console.log(set1);
+    </script>
+  </body>
+</html>
