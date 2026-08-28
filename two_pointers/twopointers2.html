@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [1, 2, 2, 1, 4];
+      let left = 0;
+      let right = arr1.length - 1;
+      let isPalindrome = true;
+
+      while (left < right) {
+        if (arr1[left] == arr1[right]) {
+          left++;
+          right--;
+        } else {
+          isPalindrome = false;
+          break;
+        }
+      }
+      if (isPalindrome) {
+        console.log("Its a palindrome");
+      } else {
+        console.log("Its not a palindrome");
+      }
+    </script>
+  </body>
+</html>
