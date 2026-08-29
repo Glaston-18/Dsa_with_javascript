@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str1 = "racecar";
+      let left = 0;
+      let right = str1.length - 1;
+      let isPalindrome = true;
+
+      while (left < right) {
+        if (str1[left] == str1[right]) {
+          left++;
+          right--;
+        } else {
+          isPalindrome = false;
+          break;
+        }
+      }
+      if (isPalindrome) {
+        console.log("Its a palindrome");
+      } else {
+        console.log("Its not a palindrome");
+      }
+    </script>
+  </body>
+</html>
