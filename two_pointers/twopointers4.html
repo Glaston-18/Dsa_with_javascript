@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let str1 = "R!.#ace,c(ar@,,,,,,, ";
+      let str1 = "A man, a plan, a canal: Panama";
+      //   let str1 = "race a car";
+      let left = 0;
+      let right = str1.length - 1;
+      let isPalindrome = true;
+      let leftLower = "";
+      let rightLower = "";
+
+      while (left < right) {
+        if (
+          (str1.charCodeAt(left) >= 32 && str1.charCodeAt(left) <= 47) ||
+          (str1.charCodeAt(left) >= 58 && str1.charCodeAt(left) <= 64) ||
+          (str1.charCodeAt(left) >= 91 && str1.charCodeAt(left) <= 96) ||
+          (str1.charCodeAt(left) >= 123 && str1.charCodeAt(left) <= 126)
+        ) {
+          left++;
+          continue;
+        }
+        if (
+          (str1.charCodeAt(right) >= 32 && str1.charCodeAt(right) <= 47) ||
+          (str1.charCodeAt(right) >= 58 && str1.charCodeAt(right) <= 64) ||
+          (str1.charCodeAt(right) >= 91 && str1.charCodeAt(right) <= 96) ||
+          (str1.charCodeAt(right) >= 123 && str1.charCodeAt(right) <= 126)
+        ) {
+          right--;
+          continue;
+        }
+        leftLower = str1.charAt(left).toLowerCase();
+        rightLower = str1.charAt(right).toLowerCase();
+
+        if (leftLower == rightLower) {
+          left++;
+          right--;
+        } else {
+          isPalindrome = false;
+          break;
+        }
+      }
+      if (isPalindrome) {
+        console.log("Its a palindrome");
+      } else {
+        console.log("Its not a palindrome");
+      }
+    </script>
+  </body>
+</html>
